@@ -1,0 +1,6 @@
+#/usr/bin/bash
+mkdir /home/liam/backup-github
+cp githubback.service  githubback.timer ~/.config/systemd/user/
+systemctl --user enable githubback.service
+systemctl --user enable githubback.timer
+systemctl --user start github.service
